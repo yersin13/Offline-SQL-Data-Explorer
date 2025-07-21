@@ -46,27 +46,27 @@ const App: React.FC = () => {
       `);
 
       // Insert sample data
-      dbInstance.run(`
-        INSERT INTO products (name, price, category) VALUES
-          ('Extra Virgin Olive Oil', 9.99, 'Pantry'),
-          ('Free Range Eggs', 4.49, 'Dairy'),
-          ('Almond Milk', 3.79, 'Dairy'),
-          ('Whole Wheat Bread', 2.50, 'Bakery'),
-          ('Organic Apple', 1.29, 'Fruits'),
-          ('Granola Bars', 3.20, 'Snacks'),
-          ('Bananas', 1.10, 'Fruits'),
-          ('Milk Chocolate', 2.99, 'Snacks'),
-          ('Peanut Butter', 4.89, 'Pantry'),
-          ('Greek Yogurt', 5.49, 'Dairy'),
-          ('Brown Rice', 2.79, 'Pantry'),
-          ('Shampoo', 6.25, 'Personal Care'),
-          ('Toilet Paper (12 pack)', 7.99, 'Household'),
-          ('Frozen Pizza', 4.99, 'Frozen Foods'),
-          ('Strawberries', 3.50, 'Fruits'),
-          ('Cheddar Cheese', 4.75, 'Dairy'),
-          ('Sparkling Water', 1.99, 'Beverages');
-          ('Orange Juice', 3.99, 'Beverages'),
-          `);
+dbInstance.run(`
+  INSERT INTO products (name, price, category) VALUES
+    ('Extra Virgin Olive Oil', 9.99, 'Pantry'),
+    ('Free Range Eggs', 4.49, 'Dairy'),
+    ('Almond Milk', 3.79, 'Dairy'),
+    ('Whole Wheat Bread', 2.50, 'Bakery'),
+    ('Organic Apple', 1.29, 'Fruits'),
+    ('Granola Bars', 3.20, 'Snacks'),
+    ('Bananas', 1.10, 'Fruits'),
+    ('Milk Chocolate', 2.99, 'Snacks'),
+    ('Peanut Butter', 4.89, 'Pantry'),
+    ('Greek Yogurt', 5.49, 'Dairy'),
+    ('Orange Juice', 3.99, 'Beverages'),
+    ('Brown Rice', 2.79, 'Pantry'),
+    ('Shampoo', 6.25, 'Personal Care'),
+    ('Toilet Paper (12 pack)', 7.99, 'Household'),
+    ('Frozen Pizza', 4.99, 'Frozen Foods'),
+    ('Strawberries', 3.50, 'Fruits'),
+    ('Cheddar Cheese', 4.75, 'Dairy'),
+    ('Sparkling Water', 1.99, 'Beverages');
+`);
 
       setDb(dbInstance);
       runQuery(defaultQuery, dbInstance);
