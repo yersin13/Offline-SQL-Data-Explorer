@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import initSqlJs, { Database } from 'sql.js';
+import './App.css'
 
 const defaultQuery = 'SELECT * FROM products';
 
@@ -54,6 +55,8 @@ dbInstance.run(`
     ('Whole Wheat Bread', 2.50, 'Bakery'),
     ('Organic Apple', 1.29, 'Fruits'),
     ('Granola Bars', 3.20, 'Snacks'),
+
+
     ('Bananas', 1.10, 'Fruits'),
     ('Milk Chocolate', 2.99, 'Snacks'),
     ('Peanut Butter', 4.89, 'Pantry'),
